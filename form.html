@@ -14,38 +14,41 @@
     </ul>
   </nav>
   
-  <header class="header-index">
+  <header class="header-short">
     <a href="#"><img class="logo" src="img/logo.png"></a>
     <img class="index-welcome-short" src="img/welcome.jpg">
     <div class="title-bold-black">оставьте свой отзыв</div>
     <div class="text-black">помогите нашим отелям стать лучше! оставьте отзыв о них,
      а также о посещенных вами достопримечательностях</div>
   </header>
-  
-  <div class="person">
-      <label class="text-black" for="surname">фамилия</label>
-      <input class="text-field" type="text" name="surname" id="surname">
-      <label class="text-black" for="name">имя</label>
-      <input class="text-field" type="text" name="name" id="name">
-      <label class="text-black" for="patronymic">отчество</label>
-      <input class="text-field" type="text" name="patronymic" id="patronymic"> 
-  </div>
-  <div class="impression">
+
+  <form>
+  <section class="person">
     <div class="title-bold-black">ваше общее впечатление</div>
-    <ul class="impression-list">
+    <label class="text-black" for="surname">фамилия</label>
+    <input class="text-field" type="text" name="surname" id="surname">
+    <label class="text-black" for="name">имя</label>
+    <input class="text-field" type="text" name="name" id="name">
+    <label class="text-black" for="patronymic">отчество</label>
+    <input class="text-field" type="text" name="patronymic" id="patronymic"> 
+  </section>
+  
+  <section class="form-section">
+    <div class="title-bold-black">ваше общее впечатление</div>
+    <ul class="radio-list">
       <li>
-        <input id="impression-positiv" type="checkbox" checked="">
-        <label class="text-bold-black" for="impression-positiv">Скорее положительное</label>
+        <input id="radio-list-positiv" type="radio" name="radio-list-item" checked="">
+        <label class="text-bold-black" for="radio-list-positiv">Скорее положительное</label>
       </li>
       <li>
-        <input id="impression-negative" type="checkbox">
-        <label class="text-bold-black" for="impression-negative">Скорее отрицательное</label>
+        <input id="radio-list-negative" type="radio" name="radio-list-item">
+        <label class="text-bold-black" for="radio-list-negative">Скорее отрицательное</label>
       </li>
     </ul>
-  </div>
+  </section>
   
   
-  <div class="datetrip">
+  <section class="form-section">
     <div class="title-bold-black">дата вашей поездки</div>
     <label class="text-black" for="datetrip-arrive">дата приезда</label>
     <input class="text-field" type="date" name="datetrip-arrive" id="datetrip-arrive">
@@ -53,21 +56,21 @@
     <div class="text-black">длительность пребывания</div>
     <div class="count">
       <div class="count-minus">-</div>
-      <output class="count-output-value">14</output>
-      <output class="count-output-unit">дн.</output>
+      <input type="number" class="count-value" name="datetrip-count-value">
+      <input type="text" class="count-unit" readonly value="дн.">
       <div class="count-plus">+</div>
     </div>
 
     <label class="text-black" for="datetrip-departure">дата отьезда</label>
     <input class="text-field" type="date" name="datetrip-departure" id="datetrip-departure">
-  </div>
+  </section>
   
-  <div class="travelers">
+  <section class="form-section">
     <div class="title-bold-black">количество путешественников</div>
     <div class="count">
       <div class="count-minus">-</div>
-      <output class="count-output-value">2</output>
-      <output class="count-output-unit">чел..</output>
+      <input type="number" class="count-value" name="travelers-count-value">
+      <input type="text" class="count-unit" readonly value="чел.">
       <div class="count-plus">+</div>
     </div>
     
@@ -105,9 +108,9 @@
         </td>
       </tr>
     </table>
-  </div>
+  </section>
   
-  <div class="visited">
+  <section class="form-section">
     <div class="title-bold-black">посещенные достопримечательности</div>
     <ul class="visited-list">
       <li>
@@ -127,21 +130,29 @@
         <label class="text-bold-black" for="visited-rock">Красные скалы</label>
       </li>
     </ul>
-  </div>
+  </section>
   
-  <div class="fotos">
+  <section class="form-section">
     <div class="title-bold-black">загрузите фотографии</div>
+    
     <a href="#" class="btn fotos-select">выбрать фотографии</a>
-    <img src="#" class="fotos-foto">
-    <div class="delete"></div>
-    <img src="#" class="fotos-foto">
-    <div class="delete"></div>
-    <img src="#" class="fotos-foto">
-    <div class="delete"></div>
-  </div>
+    <div class="fotos-box">
+      <img src="#" class="fotos-foto">
+      <div class="delete"></div>
+    </div>
+    <div class="fotos-box">
+      <img src="#" class="fotos-foto">
+      <div class="delete"></div>
+    </div>
+    <div class="fotos-box">
+      <img src="#" class="fotos-foto">
+      <div class="delete"></div>
+    </div>
+  </section>
 
-  <a href="#" class="btn submit-comment">выбрать фотографии</a>
-
+  <a href="#" class="btn submit-comment">отправить отзыв</a>
+  </form>
+  
   <footer>
     <div class="title-bold-black">#visitsedonia</div>
     <section class="social">
@@ -152,13 +163,13 @@
     </section>
   </footer>
 
-  <div class="popup-error">
+  <div class="popup popup-error">
     <div class="title-bold-black">что-то пошло не так</div>
     <div class="text-black">проверьте поля, выделенные красным,скорее всего вы забыли их заполнить</div>
     <a href="#" class="btn submit-comment">ок</a>   
   </div>
   
-  <div class="popup-океу">
+  <div class="popup popup-океу">
     <div class="title-bold-black">ваш отзыв отправлен</div>
     <div class="text-black">спасибо за ваше участие, ваш отзыв уже поступил к нам. 
     в ближайшее время мы опубликуем его на сайте.</div>
