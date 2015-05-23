@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">  
 </head>
 <body>
  
   <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__list-item">карта штата</li>
+      <li class="nav__list-item nav__list-item--active">карта штата</li>
       <li class="nav__list-item">информация</li>
       <li class="nav__list-item">фото и видео</li>
       <li class="nav__list-item">гостиницы</li>
@@ -16,148 +17,210 @@
   </nav>
   
   <header class="header-short">
-    <a href="#"><img class="header-short__logo" src="img/logo.png"></a>
-    <img class="header-short__welcome" src="img/welcome.jpg">
+    <a class="header-short__logo" href="#"><img src="img/logo.png" width="138" height="70"></a>
+    <div class="header-short__welcome"></div>
     <div class="header-short__title">оставьте свой отзыв</div>
     <div class="header-short__text">помогите нашим отелям стать лучше! оставьте отзыв о них,
      а также о посещенных вами достопримечательностях</div>
   </header>
 
   <form>
-  <section class="form-section">
-    <div class="form-section__title">представьтесь, пожалуйста</div>
-    <label class="form-section__label" for="surname">фамилия</label>
-    <input class="form-section__input-text" type="text" name="surname" id="surname">
-    <label class="form-section__label" for="name">имя</label>
-    <input class="form-section__input-text" type="text" name="name" id="name">
-    <label class="form-section__label" for="patronymic">отчество</label>
-    <input class="form-section__input-text" type="text" name="patronymic" id="patronymic"> 
+  
+  <section class="tourist">
+    <div class="tourist__title">представьтесь, пожалуйста:</div>
+
+      <div class="tourist__person">
+        <div class="input">
+          <label class="input__label" for="surname-1">фамилия:<span class="input__required"> *</span></label>
+          <input class="input__field" type="text" name="surname" id="surname-1">
+        </div>
+
+        <div class="input">
+          <label class="input__label" for="name-1">имя:<span class="input__required"> *</span></label>
+          <input class="input__field" type="text" name="name" id="name-1">
+        </div>
+
+        <div class="input">
+          <label class="input__label" for="patronymic-1">отчество:</label>
+          <input class="input__field" type="text" name="patronymic" id="patronymic-1"> 
+        </div>
+      </div>
+  
   </section>
   
-  <section class="form-section">
-    <div class="form-section__title">ваше общее впечатление</div>
+  <section class="impression">
+    <div class="impression__title">ваше общее впечатление</div>
+    
     <ul class="radio-list">
       <li>
-        <input id="radio-list__item" type="radio" name="radio-list-item" checked>
-        <label class="radio-list__label radio-list__label--checked" for="radio-list-positiv">Скорее положительное</label>
+        <input class="radio-list__item" id="radio-list__item-positiv" type="radio" name="radio-list-item" checked>
+        <label class="radio-list__label radio-list__label--checked" for="radio-list__item-positiv">Скорее положительное</label>
       </li>
       <li>
-        <input id="radio-list__item" type="radio" name="radio-list-item">
-        <label class="radio-list__label" for="radio-list-negative">Скорее отрицательное</label>
+        <input class="radio-list__item" id="radio-list__item-negative" type="radio" name="radio-list-item">
+        <label class="radio-list__label" for="radio-list__item-negative">Скорее отрицательное</label>
+      </li>
+    </ul>
+    
+  </section>
+  
+  
+  <section class="datetrip">
+    <div class="datetrip__title">дата вашей поездки</div>
+    
+    <div class="datetrip__wrap">
+    
+      <div class="input">
+        <label class="input__label" for="datetrip-arrive">дата приезда<span class="input__required"> *</span></label>
+        <input class="input__field" type="date" name="datetrip-arrive" id="datetrip-arrive">
+      </div>
+
+      <div class="detetrip__label">длительность пребывания<span class="input__required"> *</span></div>
+      <div class="count">
+        <div class="count__minus"></div>
+        <input class="count__value" type="number" name="datetrip-count-value">
+        <input class="count__unit" type="text" readonly value="дн.">
+        <div class="count__plus"></div>
+      </div>
+
+      <div class="input">
+        <label class="input__label" for="datetrip-departure">дата отьезда<span class="input__required"> *</span></label>
+        <input class="input__field" type="date" name="datetrip-departure" id="datetrip-departure">
+      </div>
+    
+    </div>
+  </section>
+
+    
+  <section class="number-of-travelers">
+    <div class="number-of-travelers__title">количество путешественников</div>
+
+    <div class="number-of-travelers__wrap">
+      <div class="number-of-travelers__label">количество путешественников<span class="input__required"> *</span></div>
+     
+      <div class="count">
+        <div class="count__minus"></div>
+        <input class="count__value" type="number" name="travelers-count-value">
+        <input class="count__unit" type="text" readonly value="чел.">
+        <div class="count__plus"></div>
+      </div>
+
+      <table class="travelers">
+        <tr>
+          <td class="travelers__col1">
+            <label class="input__label" for="travelers-number">№</label>
+            <input class="input__field" type="number" name="travelers-number" id="travelers-number" readonly value="1">
+          </td>
+          <td class="travelers__col2">
+            <div class="person">
+              <div class="input">
+                <label class="input__label" for="surname-2">фамилия</label>
+                <input class="input__field" type="text" name="surname" id="surname-2">
+              </div>
+              <div class="input">
+                <label class="input__label" for="name-2">имя</label>
+                <input class="input__field" type="text" name="name" id="name-2">
+              </div>
+              <div class="input">
+                <label class="input__label" for="patronymic-2">отчество</label>
+                <input class="input__field" type="text" name="patronymic" id="patronymic-2"> 
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="travelers__col1">
+            <label class="input__label" for="travelers-number">№</label>
+            <input class="input__field" type="number" name="travelers-number" id="travelers-number" readonly value="2">
+          </td>
+          <td class="travelers__col2">
+            <div class="person">
+              <div class="input">
+                <label class="input__label" for="surname-3">фамилия</label>
+                <input class="input__field" type="text" name="surname" id="surname-3">
+              </div>
+              <div class="input">
+                <label class="input__label" for="name-3">имя</label>
+                <input class="input__field" type="text" name="name" id="name-3">
+              </div>
+              <div class="input">
+                <label class="input__label" for="patronymic-3">отчество</label>
+                <input class="input__field" type="text" name="patronymic" id="patronymic-3"> 
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  
+  <section class="sights">
+    <div class="sights__title">посещенные достопримечательности:</div>
+    
+    <ul class="checkbox">
+      <li>
+        <input class="checkbox__item" id="sights-bridge" type="checkbox" checked>
+        <label class="checkbox__label" for="sights-bridge">Мост дьвола</label>
+      </li>
+      <li>
+        <input class="checkbox__item" id="sights-park" type="checkbox">
+        <label class="checkbox__label" for="sights-park">Слайд-парк</label>
+      </li>
+      <li>
+        <input class="checkbox__item" id="sights-hillbell" type="checkbox" checked>
+        <label class="checkbox__label" for="sights-hillbell">Гора-Колокол</label>
+      </li>
+      <li>
+        <input class="checkbox__item" id="sights-rock" type="checkbox" checked>
+        <label class="checkbox__label" for="sights-rock">Красные скалы</label>
       </li>
     </ul>
   </section>
-  
-  
-  <section class="form-section">
-    <div class="form-section__title">дата вашей поездки</div>
-    <label class="form-section__label" for="datetrip-arrive">дата приезда</label>
-    <input class="form-section__input-text" type="date" name="datetrip-arrive" id="datetrip-arrive">
-
-    <div class="form-section__label">длительность пребывания</div>
-    <div class="count">
-      <div class="count__minus">-</div>
-      <input class="count__value" type="number" name="datetrip-count-value">
-      <input class="count__unit" type="text" readonly value="дн.">
-      <div class="count__plus">+</div>
-    </div>
-
-    <label class="form-section__label" for="datetrip-departure">дата отьезда</label>
-    <input class="form-section__input-text" type="date" name="datetrip-departure" id="datetrip-departure">
-  </section>
 
     
-  <section class="form-section">
-    <div class="form-section__title">количество путешественников</div>
-    <div class="count">
-      <div class="count__minus">-</div>
-      <input class="count__value" type="number" name="travelers-count-value">
-      <input class="count__unit" type="text" readonly value="чел.">
-      <div class="count__plus">+</div>
-    </div>
-        
-    <table class="travelers">
-      <tr>
-        <td>
-          <label class="form-section__label" for="travelers-number">№</label>
-          <input class="form-section__input-text" type="number" name="travelers-number" id="travelers-number" readonly value="1">
-        </td>
-        <td>
-          <div class="person">
-            <label class="form-section__label" for="surname">фамилия</label>
-            <input class="form-section__input-text" type="text" name="surname" id="surname">
-            <label class="form-section__label" for="name">имя</label>
-            <input class="form-section__input-text" type="text" name="name" id="name">
-            <label class="form-section__label" for="patronymic">отчество</label>
-            <input class="form-section__input-text" type="text" name="patronymic" id="patronymic"> 
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label class="form-section__label" for="travelers-number">№</label>
-          <input class="form-section__input-text" type="number" name="travelers-number" id="travelers-number" readonly value="2">
-        </td>
-        <td>
-          <div class="person">
-            <label class="form-section__label" for="surname">фамилия</label>
-            <input class="form-section__input-text" type="text" name="surname" id="surname">
-            <label class="form-section__label" for="name">имя</label>
-            <input class="form-section__input-text" type="text" name="name" id="name">
-            <label class="form-section__label" for="patronymic">отчество</label>
-            <input class="form-section__input-text" type="text" name="patronymic" id="patronymic"> 
-          </div>
-        </td>
-      </tr>
-    </table>
-  </section>
-  
-  <section class="form-section">
-    <div class="form-section__title">посещенные достопримечательности</div>
-    <ul class="sights">
-      <li>
-        <input class="sights_item" id="sights-bridge" type="checkbox" checked>
-        <label class="sights_item__label sights_item__label--checked" for="sights-bridge">Мост дьвола</label>
-      </li>
-      <li>
-        <input class="sights_item" id="sights-park" type="checkbox">
-        <label class="sights_item__label" for="sights-park">Слайд-парк</label>
-      </li>
-      <li>
-        <input class="sights_item" id="sights-hill" type="checkbox" checked>
-        <label class="sights_item__label sights_item__label--checked" for="sights-hill">Гора-Колокол</label>
-      </li>
-      <li>
-        <input class="sights_item" id="sights-rock" type="checkbox" checked>
-        <label class="sights_item__label sights_item__label--checked" for="sights-rock">Красные скалы</label>
-      </li>
-    </ul>
-  </section>
+  <section class="fotos">
+      <div class="fotos__title">загрузите фотографии</div>
 
-    
-  <section class="form-section">
-    <div class="form-section__title">загрузите фотографии</div>
-    
-    <a href="#" class="btn btn--fotos-select">выбрать фотографии</a>
-    
-     <div class="fotos-box">
-      <img src="#" class="fotos-box__foto">
-      <div class="fotos-box__delete"></div>
-    </div>
-    <div class="fotos-box">
-      <img src="#" class="fotos-box__foto">
-      <div class="fotos-box__delete"></div>
-    </div>
-    <div class="fotos-box">
-      <img src="#" class="fotos-box__foto">
-      <div class="fotos-box__delete"></div>
+      <a href="#" class="btn btn--fotos-select">выбрать фотографии</a>
+
+    <div class="fotos-conteiner">
+      <div class="fotos-box">
+        <img src="../img/foto-select-1.jpg" class="fotos-box__foto">
+        <div class="fotos-box__delete"></div>
+      </div>
+      <div class="fotos-box">
+        <img src="../img/foto-select-2.png" class="fotos-box__foto">
+        <div class="fotos-box__delete"></div>
+      </div>
+      <div class="fotos-box">
+        <img src="../img/foto-select-3.png" class="fotos-box__foto">
+        <div class="fotos-box__delete"></div>
+      </div>
+      <div class="fotos-box">
+        <img src="../img/foto-select-3.png" class="fotos-box__foto">
+        <div class="fotos-box__delete"></div>
+      </div>
+      <div class="fotos-box">
+        <img src="../img/foto-select-3.png" class="fotos-box__foto">
+        <div class="fotos-box__delete"></div>
+      </div>
+      <div class="fotos-box">
+        <img src="../img/foto-select-3.png" class="fotos-box__foto">
+        <div class="fotos-box__delete"></div>
+      </div>
+      <div class="fotos-box">
+        <img src="../img/foto-select-3.png" class="fotos-box__foto">
+        <div class="fotos-box__delete"></div>
+      </div>
     </div>
   </section>
 
-  <a href="#" class="btn btn--__ok">отправить отзыв</a>
+  <a href="#" class="btn btn--submit">отправить отзыв</a>
   </form>
   
-  <footer>
+
+     <footer>
     <div class="footer__title">#visitsedonia</div>
     <section class="social">
       <a href="#" class="social__btn social__btn--tw"></a>

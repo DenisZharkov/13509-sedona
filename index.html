@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: sedona</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
  
   <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__list-item">карта штата</li>
+      <li class="nav__list-item nav__list-item--active">карта штата</li>
       <li class="nav__list-item">информация</li>
       <li class="nav__list-item">фото и видео</li>
       <li class="nav__list-item">гостиницы</li>
@@ -20,27 +20,31 @@
 
     
   <header class="header-index">
-    <a class="header-index__logo" href="#"><img src="img/logo.png"></a>
-    <img class="header-index__welcome" src="img/welcome.jpg">
-    <div class="header-index__title">седона - небольшой городок в аризоне заслуживающий большего!</div>
+    <a class="header-index__logo" href="#"><img src="../img/logo.png" width="138" height="70"></a>
+    <div class="header-index__welcome"></div>
+    <div class="header-index__title">седона - небольшой<br>городок в аризоне, заслуживающий большего!</div>
     <div class="header-index__text">рассмотрим 5 причин, по которым седона круче чем гранд каньон!</div>
   </header>
-  
-  <div class="index-cause">
-    <div class="index-cause__title">настоящий городок</div>
-    <div class="index-cause__number">№1</div>
-    <div class="index-cause__text">седона не атракцион для туристов,там течет своя жизнь</div>
+
+
+  <div class="header-cause-decor"></div>
+
+        
+  <div class="index-cause--inverted">
+    <div class="index-cause--inverted__title">настоящий городок</div>
+    <div class="index-cause--inverted__number">№1</div>
+    <div class="index-cause--inverted__text">седона не атракцион для туристов,там течет своя жизнь</div>
   </div>
   
   
   <div class="index-foto-wraper">
-    <img class="index-foto-wraper__house" src="img/foto-1.jpg">
+    <img src="../img/foto-1.jpg">
   </div>
     
 
   <div class="services">
     <div class="services__title services__title--housing">жилье</div>
-    <div class="services__text">рекомендуем пожить в настоящес отеле как в кино!</div>
+    <div class="services__text">рекомендуем пожить в настоящем отеле, все как в кино!</div>
     
     <div class="services__title services__title--souvenirs">сувениры</div>
     <div class="services__text">не только китайского, но и местного производства!</div>
@@ -50,56 +54,60 @@
   </div>
   
       
-  <div  class="index-cause">
-    <div class="index-cause__title">там есть мост дьявола</div>
-    <div class="index-cause__number">№2</div>
-    <div class="index-cause__text">да, по нему можно пройти! если кончно вы осмелитесь</div>
+  <div  class="index-cause--inverted">
+    <div class="index-cause--inverted__title">там есть мост дьявола</div>
+    <div class="index-cause--inverted__number">№2</div>
+    <div class="index-cause--inverted__text">да, по нему можно пройти! если кончно вы осмелитесь</div>
   </div>
 
     
   <div class="index-foto-wraper">
-   <img class="index-foto-wraper__canyon" src="img/canyon.jpg">
+   <img class="index-foto-wraper__canyon" src="../img/canyon.jpg" height="256">
   </div>    
   
       
-  <div  class="index-cause--inverted">
-    <div class="index-cause--inverted__title">небольшая площадь</div>
-    <div class="index-cause--inverted__number">№3</div>
-    <div class="index-cause--inverted__text">все достопримечательности находятся очень близко!</div>
+  <div  class="index-cause">
+    <div class="index-cause__title">небольшая площадь</div>
+    <div class="index-cause__number">№3</div>
+    <div class="index-cause__text">все достопримечательности находятся очень близко!</div>
+    <div class="index-cause--decor"></div>
   </div>
 
 
-  <div  class="index-cause--inverted">
-    <div class="index-cause--inverted__title">красивая дорога</div>
-    <div class="index-cause--inverted__number">№4</div>
-    <div class="index-cause--inverted__text">ехать в седону из лас-вегаса совсем не скучно!</div>
+  <div  class="index-cause">
+    <div class="index-cause__title">красивая дорога</div>
+    <div class="index-cause__number">№4</div>
+    <div class="index-cause__text">ехать в седону из лас-вегаса совсем не скучно!</div>
+    <div class="index-cause--decor"></div>
   </div>
 
 
-  <div  class="index-cause--inverted">
-    <div class="index-cause--invertede__title">мало туристов</div>
-    <div class="index-cause--inverted__number">№5</div>
-    <div class="index-cause--inverted__text">большенство едет в гранд каньон и толпится там!</div>
+  <div  class="index-cause">
+    <div class="index-cause__title">мало туристов</div>
+    <div class="index-cause__number">№5</div>
+    <div class="index-cause__text">большенство едет в гранд каньон и толпится там!</div>
   </div>
 
 
   <div class="location">
     <div class="location__title">заинтересовались</div>
     <div class="location__text">укажите предпологаемые даты поездки и мы покажем вам лучшие
-    предложения гостиниц седонии!</div>
-    <a href="#" class="btn btn--find-hotel"></a>
-    <img class="location__map" src="img/map.jpg">
+    предложения гостиниц седоне!</div>
+    <a href="#" class="btn btn--find-hotel">найти гостиницу</a>
   </div>
-
     
-  <footer>
-    <div class="footer__title">#visitsedonia</div>
+  <div class="map-wraper">
+    <img src="../img/map.jpg">
+  </div>
+  
+  <footer class="footer">
+    <div class="footer__title">#visitsedona</div>
     <section class="social">
       <a href="#" class="social__btn social__btn--tw"></a>
       <a href="#" class="social__btn social__btn--fb"></a>
       <a href="#" class="social__btn social__btn--yt"></a>
-      <div class="social__text">разработано</div>
     </section>
+    <div class="footer__text">разработано</div>
   </footer>
   
   <!-- <script src="js/script.js"></script> -->
