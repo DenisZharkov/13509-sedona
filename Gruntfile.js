@@ -6,10 +6,21 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    watch: {
+        less: {
+            files: ['./less/*.less'],
+            tasks: ['less'],
+            options: {
+                spawn: false
+            }
+        }
+    },
+    
     less: {
       style: {
         files: {
