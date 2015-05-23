@@ -570,15 +570,17 @@ body{
   flex-wrap: wrap;
   width: @width-wraper;
   margin: 0 auto;
-  padding: 6px 0 23px;
+  
+  padding: 20px 0 23px;
   text-align: left;  
 }
 
 .fotos-box{
-//  height: 70px;
+  position: relative;
+  height: 70px;
   width: 70px;
+  padding-top: 35px;
   flex-shrink: 0;
-
   img{ width: 100%; }
 }
 
@@ -586,6 +588,35 @@ body{
   margin: 0 15px;
 }
 
+.fotos-box:before{
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  background: url(../img/Cross.png) no-repeat 50% 50%;
+  background-color: @input_color;
+}
+
+.fotos-submit-conteiner{
+  @padding: 20px;
+  
+  height: 100px - @padding*2;
+  padding: @padding;
+  width: @mob-width - @padding*2;
+  background-color: @input_color;
+
+  .btn--submit{
+    @height: 58px;
+
+    height: @height;
+    max-width: @width-wraper;
+    line-height: @height;
+  }
+}
 
 /////////////////////////////  radio-list  ///////////////////////////
 
@@ -752,6 +783,81 @@ border: none;
   background: url(../img/htmlacademy-logo.png) no-repeat 100% 50%;
 }
 
+
+///////////////////////////////  popup  //////////////////////////////
+
+.popup{
+  position: fixed;
+  width: @mob-width;
+  top: 30%;
+  font-family: @font;
+  font-size: @font-bold-size;
+  font-weight: bold;
+  line-height: @l-height-high;
+  color: @font-color;
+  text-align: center;
+  text-transform: uppercase;    
+  background-color: #fff;
+  box-shadow: 0 10px 30px -10px #000;
+}
+
+.popup--error{
+  padding-bottom: 35px;
+}
+
+.popup__title{
+  margin: 0 auto;
+  padding-top: 47px;
+}
+
+.popup__text--океу{
+  width: 240px;
+  margin: 0 auto;
+  padding: 26px 0 35px;
+  font-size: @font-base-size;
+  font-weight: normal;
+  line-height: @l-height-middle;
+}
+
+.popup__text--error{
+  width: 210px;
+  margin: 0 auto;
+  padding: 26px 0 25px;
+  font-size: @font-base-size;
+  font-weight: normal;
+  line-height: @l-height-middle;
+}
+
+.popup__close-conteiner{
+  @padding: 20px;
+  
+  height: 100px - @padding*2;
+  padding: @padding;
+  width: @mob-width - @padding*2;
+  background-color: @input_color;
+
+  .btn--close{
+    @height: 58px;
+    
+    height: @height;
+    width: @width-wraper;
+    line-height: @height;
+    border: none;
+  }
+}
+
+.btn--ok{
+  @height: 58px;
+
+  height: @height;
+  width: 180px;
+  line-height: @height;
+  border: none;
+}
+
+
+//.popup--error{display: none;}
+//.popup--океу{display: none;}
 ///////////////////////////////  input  //////////////////////////////
 
 .input{
