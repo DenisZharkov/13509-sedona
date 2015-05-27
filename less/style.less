@@ -75,6 +75,7 @@ body{
 //////////////////////////////  header  ///////////////////////////////
 
 .header-index{
+  position: relative;
   max-width: @mob-width;
   padding-bottom: 30px;
   font-family: @font;
@@ -86,20 +87,17 @@ body{
   text-transform: uppercase;
 }
 .header-index__logo{
-  position: relative;
   display: block;
   height: 56px;
+}
 
-  &:after{
+.header__menu-btn{
     position: absolute;
     top: 0;
-    right: 0;
-    content: "";
-    display: block;
+    right: 5px;
     width: 50px;
     height: 50px;
     background: url(../img/menu.png) no-repeat 50% 50%;
-  }
 }
 
 .header-index__welcome{
@@ -125,6 +123,7 @@ body{
 ///////////////////////////////  headre short  ///////////////////////
 
 .header-short{
+  position: relative;
   max-width: @mob-width;
   padding-bottom: 17px;
   font-family: @font;
@@ -141,17 +140,15 @@ body{
   position: relative;
   display: block;
   height: 56px;
+}
 
-  &:after{
+.header-short__menu-btn{
     position: absolute;
     top: 0;
-    right: 0;
-    content: "";
-    display: block;
+    right: 5px;
     width: 50px;
     height: 50px;
     background: url(../img/menu.png) no-repeat 50% 50%;
-  }
 }
 
 .header-short__welcome{
@@ -497,21 +494,39 @@ body{
   }
 }
 
-.travelers__col1{ width: 58px; }
-.travelers__col2{ padding-left: 5px; }
+@travelers__leftcol: 58px;
 
-.travelers__col1,
-.travelers__col2{
+.travelers__leftcol{ width: @travelers__leftcol; }
+.travelers__rightcol{ padding-left: 5px; }
+
+.travelers__leftcol,
+.travelers__rightcol{
   vertical-align: top;
+}
 
-  .input__label{
-    box-sizing: border-box;
-    width: 100%;
-  }
-  .input__field{
-    box-sizing: border-box;
-    width: 100%;
-  }
+.travelers__leftcol-title{
+  width: @travelers__leftcol;
+  margin: 0;
+  padding: 17px 0 10px;
+  font-family: @font;
+  font-size: @font-base-size;
+  font-weight: normal;
+  line-height: @l-height-low;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.travelers__leftcol-field{
+  width: @travelers__leftcol;
+  padding: 20px 0 19px;
+  font-family: @font;
+  font-size: @font-bold-size;
+  font-weight: bold;
+  line-height: @l-height-low;
+  text-align: center;
+  color: @font-color;
+  background-color: @input_color;
+  border: none;
 }
 
 
@@ -856,8 +871,8 @@ border: none;
 }
 
 
-//.popup--error{display: none;}
-//.popup--океу{display: none;}
+.popup--error{display: none;}
+.popup--океу{display: none;}
 ///////////////////////////////  input  //////////////////////////////
 
 .input{
