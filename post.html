@@ -2,79 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">  
   <title>Document</title>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li>карта штата</li>
-      <li>информация</li>
-      <li>фото и видео</li>
-      <li>гостиницы</li>
+
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__list-item nav__list-item--active">карта штата</li>
+      <li class="nav__list-item">информация</li>
+      <li class="nav__list-item">фото и видео</li>
+      <li class="nav__list-item">гостиницы</li>
     </ul>
   </nav>
-  
-  <header class="header-short">
-    <a href="#"><img class="header-short__logo" src="img/logo.png"></a>
-    <img class="header-short__welcome" src="img/welcome.jpg">
-    <div class="header-short__title">блог шерифа</div>
-    <div class="header-short__text">седона удивительный город! горы здесь красного цвета,
+
+  <header class="header-short header-short--blog">
+    <a class="header-short__logo" href="#"><img src="img/logo.png" width="138" height="70"></a>
+    <div class="header-short__welcome"></div>
+    <div class="header-short__title  header-short__title--blog">блог шерифа</div>
+    <div class="header-short__text">седона удивительный город! горы здесь красного цвета,<br>
      а местный шериф ведет блог и общается на форумах</div>
   </header>
   
-  <main>
+  <main class="blog-main">
     <article class="blog-article">
-      <header>
-        <div class="blog-article__date">позавчера</div>
-        <div class="blog-article__tag">происшествия</div>
-        <div class="blog-article__title">внимание! сбежала моя домашняя анаконда</div>
+      
+      <header class="blog-tags">
+        <div class="blog-tags__date">позавчера</div>
+        <div class="blog-tags__tag">происшествия</div>
       </header>
       
-       <div class="header-short__text--brown">жители седоны и гости города, будтье бдительны - сбежала
-        моя домашняя змея. увидевшим срочно звонить 911 и бежать от нее подальше</div>
+      <div class="blog-article__title--small">внимание! сбежала моя домашняя анаконда</div>
       
-      <h1 class="header-short__title">предыстория</h1>
-      <p class="header-short__text">в далеком 85-ом я подобрал эту змею на трассе. ее переехал грузовик
+       <div class="blog-article__text--brown">Жители Седоны и гости города, будтье бдительны - Сбежала
+        моя домашняя змея. Увидевшим срочно звонить 911 и бежать от нее подальше</div>
+      
+      <h1 class="blog-article__title">предыстория</h1>
+      <p class="blog-article__text">в далеком 85-ом я подобрал эту змею на трассе. ее переехал грузовик
       и она валялась на обочине. мне стало жаль её и я решил взять ее с собой. кинул багажник пикапа
       и подумал тогда: "если доедет до седоны живой, так и быть, оставлю ее себе"</p>
-      <h1 class="header-short__title">пропажа</h1>
-      <p class="header-short__text">неделю назад я вернулся их канзаса и не нашел анаконду дома, обошел все 200
+      <h1 class="blog-article__title">пропажа</h1>
+      <p class="blog-article__text">неделю назад я вернулся из канзаса и не нашел анаконду дома, обошел все 200
         гектаров своешго участка, но ее нигде нет. решил сообщить в полицию, но вовремя вспомнил, что я 
         и есть полиция, поэтому отправился на поиски сам. особые приметы змеи:</p>
-      
-       <ul class="blog-article__list">
+
+      <ul class="blog-article__list">
         <li class="blog-article__list-item">длина: 5метров</li>
         <li class="blog-article__list-item">масса: 85 кг</li>
         <li class="blog-article__list-item">окраска: серовато-зеленая</li>
       </ul>
+
+      <p class="blog-article__text">если увидите эту змею, сразу<br><span class="blog-article__text--href">звоните 911</span> и бегите со всех ног от нее!</p>
       
-      <h1 class="header-short__title">предостережение</h1>
-      <p class="header-short__text">не пытайтесь убить змею, если увидите! помните, что она тоже живое существо,
+      <h1 class="blog-article__title">предостережение</h1>
+      <p class="blog-article__text">не пытайтесь убить змею, если увидите! помните, что она тоже живое существо,
         хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
 
       <div class="blog-article-quote">
-        <blockquote class="blog-article-quote__text">самый свирепый из зверей - теперь мы знаем - это человек,
-         он убивает даже когда не олоден</blockquote>
-        <cite class="blog-article-quote__cite">Андриано Челентано</cite>
+        <div class="blog-article-quote__text">самый свирепый из зверей -<br>теперь мы знаем - это человек,<br>
+         он убивает даже когда не голоден
+        </div>
+        <p class="blog-article-quote__cite">Андриано Челентано</p>
       </div>
             
     </article>
   </main>
 
   <div class="blog-article-paginator">
-    <a class="blog-article-paginator__prev" href="#prev">пред.</a>
-    <a class="blog-article-paginator__next" href="#next">след.</a>
-    <a class="blog-article-paginator__back" href="#back">назад к списку</a>
+    <div class="blog-article-paginator-conteiner">
+      <a class="blog-article-paginator__btn  blog-article-paginator__btn-prev" href="#prev">пред.</a>
+      <a class="blog-article-paginator__btn  blog-article-paginator__btn-next" href="#next">след.</a>
+      <a class="blog-article-paginator__btn  blog-article-paginator__btn-back" href="#back">назад к списку</a>
+    </div>
   </div>
 
-  <footer>
-    <div class="footer__title">#visitsedonia</div>
+  <footer class="footer">
+    <div class="footer__title">#visitsedona</div>
     <section class="social">
       <a href="#" class="social__btn social__btn--tw"></a>
       <a href="#" class="social__btn social__btn--fb"></a>
       <a href="#" class="social__btn social__btn--yt"></a>
-      <div class="social__text">разработано</div>
     </section>
+    <div class="footer__text">разработано</div>
   </footer>
   
   <!-- <script src="js/script.js"></script> -->
